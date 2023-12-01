@@ -1,12 +1,11 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Grid, Hidden } from '@mui/material';
-
+import { AppBar, Toolbar, Typography, Button, Grid, Hidden, backdropClasses } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
 const Header = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: 'black' }}>
       <Toolbar>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid item>
@@ -22,7 +21,7 @@ const Header = () => {
           <Grid item>
             <Hidden smDown>
               {/* Show this only on larger screens */}
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 2 }}>
                 
               </Typography>
             </Hidden>

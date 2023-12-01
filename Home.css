@@ -1,31 +1,46 @@
 /* Home.css */
 
-.home-background {
-height: 100vh;
 
-background-color:whitesmoke;
-
-
-  }
   
-
   .mainhometitle {
     margin-bottom: 0%;
     margin-top: 0%;
-    color:rgb(117, 34, 34);
+    color: rgb(58, 57, 57);
     font-size: 70px;
   }
-
-  .home-background section h2 {
-    margin-top: 50px; /* Adjust this value as needed */
-  }
-
+  
   .small-round-image {
-    width: 50%; /* Use a percentage for responsive width */
-    max-width: 600px; /* Maximum size the image can grow */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 50%; /* This creates the round shape */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
-    float: right; /* Aligns the image to the left */
-    margin-right: 20px; /* Optional: Adds some space between the image and any content to its right */
-}
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .newaiimg {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .mainhometitle {
+      font-size: 40px; /* Smaller font size for mobile */
+    }
+  
+    .small-round-image, .newaiimg {
+      width: 80%; /* Larger relative width for smaller screens */
+      max-width: none; /* Removes the max-width constraint */
+      float: none; /* Removes float, allowing default block stacking */
+      margin: 10px auto; /* Center images and add some vertical space */
+      display: block; /* Ensures images are block-level for centering */
+    }
+  }
+  
