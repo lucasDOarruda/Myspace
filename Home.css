@@ -1,0 +1,16 @@
+/* Home.css */
+
+.home-background {
+height: 100vh;
+
+background-color:whitesmoke;
+
+
+  }
+  
+
+  .mainhometitle {
+    margin-top: 0%;
+    color:black;
+    font-size: 70px;
+  }
