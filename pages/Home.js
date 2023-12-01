@@ -1,5 +1,6 @@
 import React from 'react';
 import backgroundImage from '../components/18086.jpg';
+import homeImage from '../img/homeimg.png'; // Adjust the path if necessary
 import '../Home.css';
 
 function Home() {
@@ -14,9 +15,14 @@ function Home() {
 
   return (
     <div style={sectionStyle}>
-      <section>
+      <div>
+   <br/>
+   <br/>
+   <br/>
         <h2 className='mainhometitle'>Transforming Raw Data into Strategic Intelligence</h2>
-      </section>
+        <img src={homeImage} alt="Home" className="small-round-image" />
+
+        </div>
     </div>
   );
 }

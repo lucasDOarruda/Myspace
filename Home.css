@@ -10,7 +10,22 @@ background-color:whitesmoke;
   
 
   .mainhometitle {
+    margin-bottom: 0%;
     margin-top: 0%;
-    color:black;
+    color:rgb(117, 34, 34);
     font-size: 70px;
   }
+
+  .home-background section h2 {
+    margin-top: 50px; /* Adjust this value as needed */
+  }
+
+  .small-round-image {
+    width: 50%; /* Use a percentage for responsive width */
+    max-width: 600px; /* Maximum size the image can grow */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 50%; /* This creates the round shape */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    float: right; /* Aligns the image to the left */
+    margin-right: 20px; /* Optional: Adds some space between the image and any content to its right */
+}
