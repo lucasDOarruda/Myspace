@@ -5,6 +5,7 @@ const footerStyle = {
   position: 'fixesd', // or 'absolute' if preferred
   bottom: '0',
   width: '10%',
+  paddingTop: '50%',
   
   textAlign: 'center',
   padding: '0px 0', // Reduced padding
