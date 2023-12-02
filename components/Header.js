@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Grid, Hidden, backdropClasses } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Grid, Hidden } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
@@ -27,7 +27,7 @@ const Header = () => {
             </Hidden>
             <Button color="inherit" component={Link} to="/">Home</Button>
             <Button color="inherit" component={Link} to="/about">About</Button>
-            <Button color="inherit" component={Link} to="/portfolio">Portfolio</Button>
+            
             <Button color="inherit" component={Link} to="/solutions">Solutions</Button>
           </Grid>
         </Grid>

@@ -4,11 +4,14 @@ import microsoft from '../img/Microsoft.png';
 const footerStyle = {
   position: 'fixed', // or 'absolute' if preferred
   bottom: '0',
-  width: '100%',
-  backgroundColor: '#f0f0f0', // You can change the background color
-  textAlign: 'center',
-  padding: '5px 0', // Reduced padding
+  right: '0',       // Aligns the footer to the right
+  width: '10%',     // Sets the width of the footer
+  paddingTop: '50%', // This may vary depending on your design
+  
+  textAlign: 'center', // Centers text inside the footer
+  padding: '0px 0',    // Reduced padding
 };
+
 
 const smallText = {
   fontSize: '12px', // Smaller font size
