@@ -19,7 +19,7 @@ const About = () => {
           <br></br>
           <br></br>
           <br></br>
-          <Typography variant="body3">
+          <Typography variant="h5">
           YaData: Driving Business Innovation with Data Intelligence, Power Virtual Agents, Power BI, PowerApps, and AI Builder
             <br /><br />
             Strategic Data Planning and Analysis: Crafting tailored data strategies that align with your business goals.
