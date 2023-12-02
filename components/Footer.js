@@ -1,5 +1,8 @@
 import React from 'react';
 import microsoft from '../img/Microsoft.png';
+import ChatIcon from '../components/ChatIcon';
+
+
 
 const footerStyle = {
   position: 'fixed', // or 'absolute' if preferred
@@ -24,6 +27,9 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} YaData 
         <img src={microsoft} alt="Microsoft Gold Partner Logo" style={{ width: '100%' }} />
       </p>
+
+      <ChatIcon />
+
     </footer>
   );
 }
