@@ -1,0 +1,50 @@
+/* Home.css */
+
+
+  
+  .mainhometitle {
+    margin-bottom: 0%;
+    margin-top: 0%;
+    color: rgb(58, 57, 57);
+    font-size: 70px;
+  }
+  
+  .small-round-image {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .newaiimg {
+    width: 50%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+    margin-right: 20px;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .mainhometitle {
+      font-size: 40px; /* Smaller font size for mobile */
+    }
+  
+    .small-round-image, .newaiimg {
+      width: 80%; /* Larger relative width for smaller screens */
+      max-width: none; /* Removes the max-width constraint */
+      float: none; /* Removes float, allowing default block stacking */
+      margin: 10px auto; /* Center images and add some vertical space */
+      display: block; /* Ensures images are block-level for centering */
+    }
+  }
+  
+
+  /* Default styles */
+
+  
