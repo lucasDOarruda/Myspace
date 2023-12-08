@@ -24,7 +24,7 @@ function App  ()  {
             
             <Route path="/solutions" element={<Solutions />} />
           </Routes>
-
+        
         <Footer />
       </div>
     </Router>
