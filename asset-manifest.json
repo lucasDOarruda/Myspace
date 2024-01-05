@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Myspace/static/css/main.23878421.css",
+    "main.js": "/Myspace/static/js/main.0c119780.js",
+    "static/media/aiprocess.gif": "/Myspace/static/media/aiprocess.eff5f32b61eca64106e0.gif",
+    "static/media/Microsoft.gif": "/Myspace/static/media/Microsoft.a9d71991b6ccca6c625b.gif",
+    "static/media/homeimg.png": "/Myspace/static/media/homeimg.de8579efb1435a96c130.png",
+    "static/media/newaiimg.png": "/Myspace/static/media/newaiimg.07186e1a24ce79d04c0a.png",
+    "static/media/imgdash.png": "/Myspace/static/media/imgdash.135c83935bd61fa16610.png",
+    "index.html": "/Myspace/index.html",
+    "main.23878421.css.map": "/Myspace/static/css/main.23878421.css.map",
+    "main.0c119780.js.map": "/Myspace/static/js/main.0c119780.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23878421.css",
+    "static/js/main.0c119780.js"
+  ]
+}
