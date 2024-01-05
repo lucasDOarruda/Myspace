@@ -2,7 +2,7 @@ import React from 'react';
 import homeImage from '../img/homeimg.png'; // Adjust the path if necessary
 import newaiimg from '../img/newaiimg.png'; // Adjust the path if necessary
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import style from '../Home.css';
+import '../Home.css';
 
 function Home() {
   return (

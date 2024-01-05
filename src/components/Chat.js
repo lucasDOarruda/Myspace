@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../css/Chat.css'; // Import the CSS file
 
 const Chat = () => {
   const [email, setEmail] = useState('');
@@ -7,30 +8,40 @@ const Chat = () => {
   const [chat, setChat] = useState([]);
 
   const handleSend = async () => {
-    const response = await axios.post('http://localhost:5000/api/send-message', {
-      email,
-      message,
-    });
+    try {
+      const response = await axios.post('http://localhost:5000/api/send-message', {
+        email,
+        message,
+      });
 
-    // Handle the response or update the chat as needed
-    console.log(response.data);
+      // Handle the response or update the chat as needed
+      console.log(response.data);
 
-    // For simplicity, update the chat state
-    setChat([...chat, { sender: 'user', message }]);
-    setChat([...chat, { sender: 'bot', message: 'Thank you for your message!' }]);
+      // Update the chat state with a single call
+      setChat((prevChat) => [
+        ...prevChat,
+        { sender: 'user', message },
+        { sender: 'bot', message: 'Thank you for your message!' },
+      ]);
+    } catch (error) {
+      console.error('Error sending message:', error.message);
+    }
   };
 
   return (
-    <div>
-      <div>
+    <div className="chat-container">
+      <div className="message-container">
         {chat.map((item, index) => (
-          <div key={index} className={item.sender}>
+          <div
+            key={index}
+            className={item.sender === 'user' ? 'user-message' : 'bot-message'}
+          >
             <span>{item.sender === 'user' ? 'You: ' : 'Bot: '}</span>
             {item.message}
           </div>
         ))}
       </div>
-      <div>
+      <div className="form-container">
         <input
           type="email"
           placeholder="Your Email"
