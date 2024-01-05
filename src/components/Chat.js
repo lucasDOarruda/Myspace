@@ -2,39 +2,48 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const Chat = () => {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [chat, setChat] = useState([]);
 
-  const sendMessage = async () => {
-    try {
-      const response = await axios.post('http://localhost:6000/process_message', { input });
-      const botResponse = response.data.botResponse;
-  
-      // Append user and bot messages to the messages state
-      setMessages([
-        ...messages,
-        { text: input, from: 'user' },
-        { text: botResponse, from: 'bot' },
-      ]);
-  
-      setInput('');
-    } catch (error) {
-      console.error('Error sending message:', error);
-    }
+  const handleSend = async () => {
+    const response = await axios.post('http://localhost:5000/api/send-message', {
+      email,
+      message,
+    });
+
+    // Handle the response or update the chat as needed
+    console.log(response.data);
+
+    // For simplicity, update the chat state
+    setChat([...chat, { sender: 'user', message }]);
+    setChat([...chat, { sender: 'bot', message: 'Thank you for your message!' }]);
   };
-  
 
   return (
     <div>
-      <div className="messages">
-        {messages.map((message, index) => (
-          <div key={index} className={`message ${message.from}`}>
-            {message.text}
+      <div>
+        {chat.map((item, index) => (
+          <div key={index} className={item.sender}>
+            <span>{item.sender === 'user' ? 'You: ' : 'Bot: '}</span>
+            {item.message}
           </div>
         ))}
       </div>
-      <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
-      <button onClick={sendMessage}>Send</button>
+      <div>
+        <input
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <textarea
+          placeholder="Type your message here"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+        <button onClick={handleSend}>Send</button>
+      </div>
     </div>
   );
 };
