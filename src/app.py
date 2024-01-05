@@ -1,27 +1,27 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from dotenv import load_dotenv
+load_dotenv()  # This loads the environment variables from .env.
 
-app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}})
+
+from flask import Flask, send_from_directory
+
+app = Flask(__name__, static_folder='../build', static_url_path='/')
 
 @app.route('/')
-def home():
-    return 'Welcome to the Flask API!'
+def index():
+    return send_from_directory(app.static_folder, 'index.html')
 
-@app.route('/api/send-message', methods=['POST'])
-def send_message():
-    data = request.get_json()
-    email = data.get('email')
-    message = data.get('message')
-
-    # Add your logic to send the email or handle the message here
-
-    response = jsonify({
-        'status': 'success',
-        'message': 'Message sent successfully!',
-    })
-
-    return response
+# Other Flask routes...
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(use_reloader=True, port=5000, threaded=True)
+
+print("Starting Flask server...")
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+try:
+    if __name__ == '__main__':
+        app.run(debug=True)
+except Exception as e:
+    print(e)

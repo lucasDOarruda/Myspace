@@ -1,4 +1,5 @@
 {
+  "homepage": "https://lucasdoarruda.github.io/Myspace/",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -32,8 +33,6 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5000",
-
-  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -55,6 +54,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.23.3",
     "@csstools/postcss-progressive-custom-properties": "^3.0.2",
+    "gh-pages": "^6.1.1",
     "postcss-preset-env": "^9.3.0",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"

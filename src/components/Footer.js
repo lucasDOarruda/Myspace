@@ -2,6 +2,8 @@ import React from 'react';
 import microsoft from '../img/Microsoft.gif';
 import ChatIcon from '../components/ChatIcon';
 
+
+
 const footerStyle = {
   position: 'fixed', // or 'absolute' if preferred
   bottom: '0',
@@ -13,11 +15,19 @@ const footerStyle = {
   padding: '0px 0',    // Reduced padding
 };
 
+
+
+
+
 const Footer = () => {
   return (
     <footer style={footerStyle}>
-      <img src={microsoft} alt="Microsoft Gold Partner Logo" style={{ width: '100%' }} />
+      <p>
+        <img src={microsoft} alt="Microsoft Gold Partner Logo" style={{ width: '100%' }} />
+      </p>
+
       <ChatIcon />
+
     </footer>
   );
 }
