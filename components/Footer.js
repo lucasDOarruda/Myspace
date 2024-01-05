@@ -1,5 +1,5 @@
 import React from 'react';
-import microsoft from '../img/Microsoft.png';
+import microsoft from '../img/Microsoft.gif';
 import ChatIcon from '../components/ChatIcon';
 
 
@@ -16,15 +16,13 @@ const footerStyle = {
 };
 
 
-const smallText = {
-  fontSize: '12px', // Smaller font size
-};
+
+
 
 const Footer = () => {
   return (
     <footer style={footerStyle}>
-      <p style={smallText}>
-        &copy; {new Date().getFullYear()} YaData 
+      <p>
         <img src={microsoft} alt="Microsoft Gold Partner Logo" style={{ width: '100%' }} />
       </p>
 
